@@ -1,6 +1,15 @@
-// src/pages/Home.js
 import React from "react";
+import AboutRow1 from "../components/AboutRow1";
+import AboutRow2 from "../components/AboutRow2";
+import AboutRow3 from "../components/AboutRow3";
 
-export default function Home() {
-  return <div style={{ padding: "80px 20px" }}><h1>Home Page</h1></div>;
+export default function About() {
+  return (
+    <div style={{ marginTop: "80px", marginBottom: "60px" }}>
+      <h1 style={{ textAlign: "center", margin: "20px 0" }}>About Us</h1>
+      <AboutRow1 />
+      <AboutRow2 />
+      <AboutRow3 />
+    </div>
+  );
 }

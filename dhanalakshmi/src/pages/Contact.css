@@ -1,0 +1,67 @@
+.contact-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .contact-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .contact-form button {
+    padding: 10px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+  
+  .contact-form button:hover {
+    background-color: #1da851;
+  }
+  
+  .submitted-msg {
+    background-color: #dff0d8;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .join-us {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .join-card {
+    background: #333;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .join-card:hover {
+    background: #555;
+  }
+  

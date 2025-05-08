@@ -1,23 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.css";
 
 export default function TestimonialSlider() {
-  const testimonials = [
-    { name: "John", message: "Excellent service!" },
-    { name: "Priya", message: "Very professional and friendly." },
-    { name: "Ali", message: "Highly recommend them!" },
-  ];
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      const querySnapshot = await getDocs(collection(db, "testimonials"));
+      const data = querySnapshot.docs.map(doc => doc.data());
+      setTestimonials(data);
+    };
+
+    fetchTestimonials();
+  }, []);
 
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
+    dots: true, infinite: true, speed: 500,
+    slidesToShow: 1, slidesToScroll: 1, autoplay: true,
   };
 
   return (
